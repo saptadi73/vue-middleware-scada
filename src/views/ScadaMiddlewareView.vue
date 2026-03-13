@@ -11,9 +11,17 @@ const schedulerEnabled = ref(true)
 const loading = ref(false)
 const continuing = ref(false)
 const actionLoading = ref(false)
+const dangerActionLoading = ref(false)
 const errorMessage = ref('')
+const successMessage = ref('')
 const lastUpdated = ref('-')
 const refreshTimer = ref(null)
+const resetTask1Switch = ref(false)
+const clearMoBatchSwitch = ref(false)
+const triggerSyncSwitch = ref(false)
+const confirmModalOpen = ref(false)
+const confirmModalStep = ref(1)
+const pendingDangerAction = ref('')
 
 const taskSummaries = ref([])
 const moBatchRows = ref([])
@@ -27,6 +35,28 @@ const historyPage = computed(() => Math.floor(historyOffset.value / HISTORY_LIMI
 const historyTotalPages = computed(() => {
   if (historyTotal.value <= 0) return 1
   return Math.ceil(historyTotal.value / HISTORY_LIMIT)
+})
+
+const isResetAction = computed(() => pendingDangerAction.value === 'reset-task1')
+
+const confirmModalTitle = computed(() =>
+  confirmModalStep.value === 1 ? 'Konfirmasi Tindakan' : 'Konfirmasi Ulang',
+)
+
+const confirmModalActionLabel = computed(() =>
+  isResetAction.value ? 'Reset TASK1 Start' : 'Clear MO Batch',
+)
+
+const confirmModalMessage = computed(() => {
+  if (confirmModalStep.value === 1) {
+    return isResetAction.value
+      ? 'Reset TASK1 Start akan dijalankan. Lanjutkan?'
+      : 'Clear MO Batch akan dijalankan. Lanjutkan?'
+  }
+
+  return isResetAction.value
+    ? 'Apakah Anda yakin akan reset ulang TASK dari awal?'
+    : 'Anda yakin akan melakukan penghapusan semua MO Batch yang ada di antrean?'
 })
 
 const getRowNumber = (index) => historyOffset.value + index + 1
@@ -171,8 +201,10 @@ const refreshAllData = async () => {
 const triggerManualSync = async () => {
   actionLoading.value = true
   errorMessage.value = ''
+  successMessage.value = ''
   try {
     await callMiddleware('/api/admin/trigger-sync', { method: 'POST' })
+    successMessage.value = 'Trigger sync berhasil dijalankan.'
     await refreshAllData()
   } catch (error) {
     errorMessage.value = error instanceof Error ? error.message : 'Trigger sync gagal'
@@ -180,6 +212,95 @@ const triggerManualSync = async () => {
     actionLoading.value = false
   }
 }
+
+const executeResetTask1Start = async () => {
+  dangerActionLoading.value = true
+  errorMessage.value = ''
+  successMessage.value = ''
+
+  try {
+    await callMiddleware('/api/admin/reset-task1-start', { method: 'POST' })
+    successMessage.value = 'Reset TASK1 Start berhasil. TASK dimulai ulang dari awal.'
+    await refreshAllData()
+  } catch (error) {
+    errorMessage.value = error instanceof Error ? error.message : 'Reset TASK1 Start gagal'
+  } finally {
+    dangerActionLoading.value = false
+  }
+}
+
+const executeClearMoBatch = async () => {
+  dangerActionLoading.value = true
+  errorMessage.value = ''
+  successMessage.value = ''
+
+  try {
+    await callMiddleware('/api/admin/clear-mo-batch', { method: 'POST' })
+    successMessage.value = 'Semua antrean MO Batch berhasil dihapus.'
+    await refreshAllData()
+  } catch (error) {
+    errorMessage.value = error instanceof Error ? error.message : 'Clear MO Batch gagal'
+  } finally {
+    dangerActionLoading.value = false
+  }
+}
+
+const openDangerConfirmation = (action) => {
+  pendingDangerAction.value = action
+  confirmModalStep.value = 1
+  confirmModalOpen.value = true
+}
+
+const closeDangerConfirmation = () => {
+  confirmModalOpen.value = false
+  confirmModalStep.value = 1
+
+  if (pendingDangerAction.value === 'reset-task1') {
+    resetTask1Switch.value = false
+  }
+
+  if (pendingDangerAction.value === 'clear-mo-batch') {
+    clearMoBatchSwitch.value = false
+  }
+
+  pendingDangerAction.value = ''
+}
+
+const confirmDangerAction = async () => {
+  if (confirmModalStep.value === 1) {
+    confirmModalStep.value = 2
+    return
+  }
+
+  if (pendingDangerAction.value === 'reset-task1') {
+    await executeResetTask1Start()
+  }
+
+  if (pendingDangerAction.value === 'clear-mo-batch') {
+    await executeClearMoBatch()
+  }
+
+  closeDangerConfirmation()
+}
+
+watch(resetTask1Switch, async (enabled) => {
+  if (!enabled) return
+
+  openDangerConfirmation('reset-task1')
+})
+
+watch(clearMoBatchSwitch, async (enabled) => {
+  if (!enabled) return
+
+  openDangerConfirmation('clear-mo-batch')
+})
+
+watch(triggerSyncSwitch, async (enabled) => {
+  if (!enabled) return
+
+  await triggerManualSync()
+  triggerSyncSwitch.value = false
+})
 
 const continueMonitoring = async () => {
   continuing.value = true
@@ -270,13 +391,6 @@ onUnmounted(() => {
           >
             Continue Monitoring Task Scheduler
           </button>
-          <button
-            @click="triggerManualSync"
-            :disabled="actionLoading"
-            class="rounded-lg bg-gradient-to-r from-orange-600 to-red-600 px-4 py-2 text-sm font-semibold text-white transition-all hover:from-orange-700 hover:to-red-700 disabled:cursor-not-allowed disabled:opacity-60"
-          >
-            Trigger Sync
-          </button>
         </div>
       </div>
 
@@ -298,6 +412,29 @@ onUnmounted(() => {
               </p>
             </div>
           </div>
+
+          <div class="flex items-center gap-3">
+            <label class="relative inline-flex cursor-pointer items-center">
+              <input
+                v-model="triggerSyncSwitch"
+                type="checkbox"
+                class="peer sr-only"
+                :disabled="actionLoading"
+              />
+              <div
+                class="peer h-6 w-11 rounded-full bg-slate-600 transition after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-orange-500 peer-checked:after:translate-x-full peer-disabled:cursor-not-allowed peer-disabled:opacity-60"
+              ></div>
+            </label>
+            <div>
+              <p class="text-sm font-semibold text-white">Switch Trigger TASK1 Manual</p>
+              <p class="text-xs text-gray-400">
+                {{
+                  actionLoading ? 'Memproses trigger sync...' : 'ON untuk trigger sync satu kali'
+                }}
+              </p>
+            </div>
+          </div>
+
           <div class="text-right text-xs text-gray-400">
             <p>Interval refresh: 15 detik</p>
             <p>Last update: {{ lastUpdated }}</p>
@@ -310,6 +447,68 @@ onUnmounted(() => {
         class="mb-6 rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-300"
       >
         {{ errorMessage }}
+      </div>
+
+      <div
+        v-if="successMessage"
+        class="mb-6 rounded-lg border border-green-500/40 bg-green-500/10 px-4 py-3 text-sm text-green-300"
+      >
+        {{ successMessage }}
+      </div>
+
+      <div
+        class="mb-6 rounded-xl border border-slate-600 bg-gradient-to-br from-slate-700 to-slate-800 p-5 shadow-lg"
+      >
+        <div class="mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-xl text-red-400">warning</span>
+          <h2 class="text-base font-bold text-white">Danger Actions</h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class="rounded-lg border border-slate-600 bg-slate-800/70 p-4">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="text-sm font-semibold text-white">Switch Reset TASK1 Start</p>
+                <p class="text-xs text-gray-400">
+                  Reset ulang TASK dari awal (double confirmation).
+                </p>
+              </div>
+              <label class="relative inline-flex cursor-pointer items-center">
+                <input
+                  v-model="resetTask1Switch"
+                  type="checkbox"
+                  class="peer sr-only"
+                  :disabled="dangerActionLoading"
+                />
+                <div
+                  class="peer h-6 w-11 rounded-full bg-slate-600 transition after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-red-500 peer-checked:after:translate-x-full peer-disabled:cursor-not-allowed peer-disabled:opacity-60"
+                ></div>
+              </label>
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-slate-600 bg-slate-800/70 p-4">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="text-sm font-semibold text-white">Switch Clear MO Batch</p>
+                <p class="text-xs text-gray-400">
+                  Hapus seluruh MO Batch pada antrean (double confirmation).
+                </p>
+              </div>
+              <label class="relative inline-flex cursor-pointer items-center">
+                <input
+                  v-model="clearMoBatchSwitch"
+                  type="checkbox"
+                  class="peer sr-only"
+                  :disabled="dangerActionLoading"
+                />
+                <div
+                  class="peer h-6 w-11 rounded-full bg-slate-600 transition after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-red-500 peer-checked:after:translate-x-full peer-disabled:cursor-not-allowed peer-disabled:opacity-60"
+                ></div>
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-4">
@@ -452,6 +651,44 @@ onUnmounted(() => {
 
       <div v-if="loading" class="mt-4 text-center text-sm text-cyan-300">
         Loading middleware data...
+      </div>
+
+      <div
+        v-if="confirmModalOpen"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 p-4"
+      >
+        <div class="w-full max-w-md rounded-xl border border-slate-600 bg-slate-800 p-5 shadow-2xl">
+          <div class="mb-3 flex items-center gap-2">
+            <span class="material-symbols-outlined text-xl text-red-400">warning</span>
+            <h3 class="text-base font-bold text-white">{{ confirmModalTitle }}</h3>
+          </div>
+
+          <p class="mb-2 text-sm font-semibold text-red-300">{{ confirmModalActionLabel }}</p>
+          <p class="mb-5 text-sm text-gray-300">{{ confirmModalMessage }}</p>
+
+          <div class="flex items-center justify-end gap-2">
+            <button
+              @click="closeDangerConfirmation"
+              :disabled="dangerActionLoading"
+              class="rounded-lg border border-slate-500 px-4 py-2 text-sm font-semibold text-gray-200 transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              Batal
+            </button>
+            <button
+              @click="confirmDangerAction"
+              :disabled="dangerActionLoading"
+              class="rounded-lg bg-gradient-to-r from-red-600 to-rose-600 px-4 py-2 text-sm font-semibold text-white transition hover:from-red-700 hover:to-rose-700 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {{
+                dangerActionLoading
+                  ? 'Memproses...'
+                  : confirmModalStep === 1
+                    ? 'Lanjutkan'
+                    : 'Ya, Eksekusi'
+              }}
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

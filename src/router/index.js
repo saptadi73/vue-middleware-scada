@@ -43,9 +43,19 @@ const router = createRouter({
       component: () => import('../views/ScadaMiddlewareView.vue'),
     },
     {
+      path: '/middleware-kiosk',
+      name: 'middleware-kiosk',
+      component: () => import('../views/MiddlewareKioskView.vue'),
+    },
+    {
       path: '/hr',
       name: 'hr',
       component: () => import('../views/HumanResourcesView.vue'),
+    },
+    {
+      path: '/task-monitor',
+      name: 'task-monitor',
+      component: () => import('../views/TaskMonitorView.vue'),
     },
   ],
 })

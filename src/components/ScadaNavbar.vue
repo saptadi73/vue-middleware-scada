@@ -37,6 +37,18 @@ const isActive = (path) => computed(() => route.path === path)
             <span class="material-symbols-outlined text-sm mr-1">sync_alt</span>
             Middleware
           </RouterLink>
+          <RouterLink
+            to="/middleware-kiosk"
+            :class="[
+              isActive('/middleware-kiosk').value
+                ? 'border-cyan-500 text-cyan-400'
+                : 'border-transparent text-gray-400 hover:text-gray-200',
+              'inline-flex items-center px-3 py-2 border-b-2 text-sm font-medium transition-colors font-poppins',
+            ]"
+          >
+            <span class="material-symbols-outlined text-sm mr-1">tv</span>
+            TV Kiosk
+          </RouterLink>
         </div>
 
         <!-- Status Indicator -->

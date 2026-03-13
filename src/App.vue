@@ -13,7 +13,8 @@ const isSCADARoute = (path) =>
   path === '/inventory' ||
   path === '/maintenance' ||
   path === '/kpi' ||
-  path === '/middleware'
+  path === '/middleware' ||
+  path === '/middleware-kiosk'
 </script>
 
 <template>
