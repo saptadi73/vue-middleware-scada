@@ -1,0 +1,24 @@
+{
+  "dashboard": "quality",
+  "widgets": [
+    {
+      "id": "quality_kpi",
+      "chart_type": "kpi_card",
+      "average_deviation_percent": 0.38,
+      "batch_ok_percent": 94.2,
+      "batch_ng_percent": 5.8
+    },
+    {
+      "id": "deviation_trend",
+      "chart_type": "line",
+      "x_axis": "batch",
+      "y_axis": "deviation_percent",
+      "data": [
+        { "batch": "B001", "value": 0.3 },
+        { "batch": "B002", "value": 0.4 },
+        { "batch": "B003", "value": 0.6 },
+        { "batch": "B004", "value": 0.2 }
+      ]
+    }
+  ]
+}

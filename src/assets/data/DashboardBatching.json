@@ -1,0 +1,32 @@
+{
+  "dashboard": "batching",
+  "widgets": [
+    {
+      "id": "active_batch",
+      "chart_type": "progress_bar",
+      "batch_id": "BATCH-2026-0018",
+      "recipe": "Feed Starter A",
+      "step": "WEIGHING",
+      "progress_percent": 62
+    },
+    {
+      "id": "material_table",
+      "chart_type": "table",
+      "columns": ["Material", "Target (kg)", "Actual (kg)", "Deviation (kg)"],
+      "rows": [
+        {
+          "material": "Jagung",
+          "target": 500,
+          "actual": 498,
+          "deviation": -2
+        },
+        {
+          "material": "Bungkil Kedelai",
+          "target": 200,
+          "actual": 201,
+          "deviation": 1
+        }
+      ]
+    }
+  ]
+}

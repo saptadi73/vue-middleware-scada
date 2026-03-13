@@ -1,0 +1,25 @@
+{
+  "dashboard": "alarm",
+  "widgets": [
+    {
+      "id": "active_alarms",
+      "chart_type": "alarm_list",
+      "data": [
+        {
+          "tag": "MIXER_MOTOR_OVERLOAD",
+          "severity": "HIGH",
+          "message": "Arus motor mixer melebihi batas",
+          "timestamp": "2026-01-25 10:12:45",
+          "acknowledged": false
+        },
+        {
+          "tag": "LOW_LEVEL_JAGUNG",
+          "severity": "MEDIUM",
+          "message": "Level silo jagung rendah",
+          "timestamp": "2026-01-25 09:58:12",
+          "acknowledged": true
+        }
+      ]
+    }
+  ]
+}

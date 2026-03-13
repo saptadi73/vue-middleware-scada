@@ -1,0 +1,132 @@
+{
+  "consumption_history": [
+    {
+      "date": "2026-01-20",
+      "jagung": 8.5,
+      "bungkil_kedelai": 5.2,
+      "tepung_ikan": 3.8,
+      "limestone": 1.2,
+      "premix": 0.8,
+      "salt": 2.1
+    },
+    {
+      "date": "2026-01-21",
+      "jagung": 9.2,
+      "bungkil_kedelai": 5.8,
+      "tepung_ikan": 4.1,
+      "limestone": 1.3,
+      "premix": 0.9,
+      "salt": 2.3
+    },
+    {
+      "date": "2026-01-22",
+      "jagung": 8.8,
+      "bungkil_kedelai": 5.5,
+      "tepung_ikan": 3.9,
+      "limestone": 1.1,
+      "premix": 0.85,
+      "salt": 2.0
+    },
+    {
+      "date": "2026-01-23",
+      "jagung": 9.5,
+      "bungkil_kedelai": 6.1,
+      "tepung_ikan": 4.3,
+      "limestone": 1.4,
+      "premix": 0.95,
+      "salt": 2.4
+    },
+    {
+      "date": "2026-01-24",
+      "jagung": 8.9,
+      "bungkil_kedelai": 5.6,
+      "tepung_ikan": 4.0,
+      "limestone": 1.2,
+      "premix": 0.88,
+      "salt": 2.2
+    },
+    {
+      "date": "2026-01-25",
+      "jagung": 9.1,
+      "bungkil_kedelai": 5.9,
+      "tepung_ikan": 4.2,
+      "limestone": 1.3,
+      "premix": 0.92,
+      "salt": 2.3
+    },
+    {
+      "date": "2026-01-26",
+      "jagung": 8.6,
+      "bungkil_kedelai": 5.3,
+      "tepung_ikan": 3.7,
+      "limestone": 1.0,
+      "premix": 0.8,
+      "salt": 2.0
+    }
+  ],
+  "forecast_7days": [
+    {
+      "date": "2026-01-28",
+      "jagung": 9.0,
+      "bungkil_kedelai": 5.7,
+      "tepung_ikan": 4.0,
+      "limestone": 1.2,
+      "premix": 0.9,
+      "salt": 2.2
+    },
+    {
+      "date": "2026-01-29",
+      "jagung": 9.3,
+      "bungkil_kedelai": 5.9,
+      "tepung_ikan": 4.1,
+      "limestone": 1.3,
+      "premix": 0.93,
+      "salt": 2.3
+    },
+    {
+      "date": "2026-01-30",
+      "jagung": 8.7,
+      "bungkil_kedelai": 5.5,
+      "tepung_ikan": 3.9,
+      "limestone": 1.1,
+      "premix": 0.87,
+      "salt": 2.1
+    },
+    {
+      "date": "2026-01-31",
+      "jagung": 9.2,
+      "bungkil_kedelai": 5.8,
+      "tepung_ikan": 4.0,
+      "limestone": 1.2,
+      "premix": 0.91,
+      "salt": 2.2
+    },
+    {
+      "date": "2026-02-01",
+      "jagung": 9.0,
+      "bungkil_kedelai": 5.6,
+      "tepung_ikan": 4.1,
+      "limestone": 1.3,
+      "premix": 0.89,
+      "salt": 2.3
+    },
+    {
+      "date": "2026-02-02",
+      "jagung": 8.8,
+      "bungkil_kedelai": 5.4,
+      "tepung_ikan": 3.8,
+      "limestone": 1.0,
+      "premix": 0.85,
+      "salt": 2.0
+    },
+    {
+      "date": "2026-02-03",
+      "jagung": 9.4,
+      "bungkil_kedelai": 6.0,
+      "tepung_ikan": 4.2,
+      "limestone": 1.4,
+      "premix": 0.95,
+      "salt": 2.4
+    }
+  ]
+}

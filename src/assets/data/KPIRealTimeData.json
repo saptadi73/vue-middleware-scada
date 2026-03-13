@@ -1,0 +1,155 @@
+{
+  "current_shift": {
+    "shift_name": "Shift 1 (06:00 - 14:00)",
+    "date": "2026-01-27",
+    "operator": "Ahmad Ridho",
+    "start_time": "06:00",
+    "current_time": "14:35",
+    "elapsed_hours": 8.58,
+    "status": "Running"
+  },
+  "real_time_metrics": {
+    "oee": 82.4,
+    "availability": 94.5,
+    "performance": 89.2,
+    "quality": 97.3,
+    "throughput_ton_per_hour": 4.85,
+    "target_throughput": 5.2,
+    "batches_completed_today": 18,
+    "batches_target_today": 20,
+    "waste_percent": 2.8,
+    "target_waste": 2.0,
+    "current_production_ton": 87.3,
+    "target_production_ton": 95.0,
+    "achievement_percent": 91.9,
+    "downtime_minutes_today": 52,
+    "quality_ok_percent": 97.3,
+    "quality_ng_percent": 2.7
+  },
+  "hourly_data": [
+    {
+      "hour": "06:00",
+      "throughput": 5.1,
+      "oee": 84.2,
+      "downtime": 0
+    },
+    {
+      "hour": "07:00",
+      "throughput": 4.8,
+      "oee": 81.5,
+      "downtime": 8
+    },
+    {
+      "hour": "08:00",
+      "throughput": 5.2,
+      "oee": 85.1,
+      "downtime": 0
+    },
+    {
+      "hour": "09:00",
+      "throughput": 4.9,
+      "oee": 82.3,
+      "downtime": 12
+    },
+    {
+      "hour": "10:00",
+      "throughput": 5.0,
+      "oee": 83.2,
+      "downtime": 0
+    },
+    {
+      "hour": "11:00",
+      "throughput": 4.6,
+      "oee": 79.8,
+      "downtime": 18
+    },
+    {
+      "hour": "12:00",
+      "throughput": 4.9,
+      "oee": 82.7,
+      "downtime": 0
+    },
+    {
+      "hour": "13:00",
+      "throughput": 5.1,
+      "oee": 84.5,
+      "downtime": 0
+    },
+    {
+      "hour": "14:00",
+      "throughput": 4.7,
+      "oee": 80.9,
+      "downtime": 14
+    }
+  ],
+  "shift_comparison": [
+    {
+      "shift": "Shift 1 (06:00-14:00)",
+      "oee": 82.4,
+      "throughput": 4.85,
+      "quality": 97.3,
+      "downtime": 52,
+      "operator": "Ahmad Ridho"
+    },
+    {
+      "shift": "Shift 2 (14:00-22:00)",
+      "oee": 85.1,
+      "throughput": 5.05,
+      "quality": 98.1,
+      "downtime": 35,
+      "operator": "Budi Santoso"
+    },
+    {
+      "shift": "Shift 3 (22:00-06:00)",
+      "oee": 79.8,
+      "throughput": 4.62,
+      "quality": 96.2,
+      "downtime": 68,
+      "operator": "Siti Maryam"
+    }
+  ],
+  "daily_trend": [
+    {
+      "date": "2026-01-20",
+      "oee": 81.2,
+      "throughput": 4.72,
+      "achievement": 89.5
+    },
+    {
+      "date": "2026-01-21",
+      "oee": 83.5,
+      "throughput": 4.95,
+      "achievement": 93.2
+    },
+    {
+      "date": "2026-01-22",
+      "oee": 80.1,
+      "throughput": 4.58,
+      "achievement": 86.8
+    },
+    {
+      "date": "2026-01-23",
+      "oee": 84.2,
+      "throughput": 5.08,
+      "achievement": 96.1
+    },
+    {
+      "date": "2026-01-24",
+      "oee": 82.9,
+      "throughput": 4.88,
+      "achievement": 92.4
+    },
+    {
+      "date": "2026-01-25",
+      "oee": 83.8,
+      "throughput": 5.02,
+      "achievement": 95.2
+    },
+    {
+      "date": "2026-01-26",
+      "oee": 81.5,
+      "throughput": 4.75,
+      "achievement": 90.1
+    }
+  ]
+}

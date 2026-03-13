@@ -1,0 +1,162 @@
+{
+  "period": "20-26 Januari 2026",
+  "type": "weekly",
+  "summary": {
+    "total_batches": 35,
+    "quality_ok_percent": 94.8,
+    "quality_ng_percent": 5.2,
+    "avg_deviation": 0.42,
+    "avg_production_duration": "45.3 menit",
+    "total_downtime_hours": 2.5,
+    "downtime_percent": 1.8
+  },
+  "daily_quality": [
+    {
+      "date": "2026-01-20",
+      "day": "Senin",
+      "batches": 5,
+      "ok": 5,
+      "ng": 0,
+      "ok_percent": 100,
+      "avg_deviation": 0.25,
+      "avg_duration": "44.2 menit",
+      "downtime": 0.25
+    },
+    {
+      "date": "2026-01-21",
+      "day": "Selasa",
+      "batches": 5,
+      "ok": 5,
+      "ng": 0,
+      "ok_percent": 100,
+      "avg_deviation": 0.32,
+      "avg_duration": "45.1 menit",
+      "downtime": 0.3
+    },
+    {
+      "date": "2026-01-22",
+      "day": "Rabu",
+      "batches": 5,
+      "ok": 4,
+      "ng": 1,
+      "ok_percent": 80,
+      "avg_deviation": 0.58,
+      "avg_duration": "46.5 menit",
+      "downtime": 0.4
+    },
+    {
+      "date": "2026-01-23",
+      "day": "Kamis",
+      "batches": 5,
+      "ok": 5,
+      "ng": 0,
+      "ok_percent": 100,
+      "avg_deviation": 0.38,
+      "avg_duration": "44.8 menit",
+      "downtime": 0.35
+    },
+    {
+      "date": "2026-01-24",
+      "day": "Jumat",
+      "batches": 5,
+      "ok": 5,
+      "ng": 0,
+      "ok_percent": 100,
+      "avg_deviation": 0.45,
+      "avg_duration": "45.9 menit",
+      "downtime": 0.45
+    },
+    {
+      "date": "2026-01-25",
+      "day": "Sabtu",
+      "batches": 5,
+      "ok": 5,
+      "ng": 0,
+      "ok_percent": 100,
+      "avg_deviation": 0.38,
+      "avg_duration": "45.5 menit",
+      "downtime": 0.3
+    },
+    {
+      "date": "2026-01-26",
+      "day": "Minggu",
+      "batches": 4,
+      "ok": 4,
+      "ng": 0,
+      "ok_percent": 100,
+      "avg_deviation": 0.52,
+      "avg_duration": "46.2 menit",
+      "downtime": 0.4
+    }
+  ],
+  "quality_metrics": [
+    {
+      "metric": "Deviasi pH",
+      "target": "±0.5",
+      "actual": "0.42",
+      "status": "OK"
+    },
+    {
+      "metric": "Deviasi Kadar Lemak",
+      "target": "±2%",
+      "actual": "1.8%",
+      "status": "OK"
+    },
+    {
+      "metric": "Deviasi Protein",
+      "target": "±1.5%",
+      "actual": "1.2%",
+      "status": "OK"
+    },
+    {
+      "metric": "Kontaminasi",
+      "target": "< 0.1%",
+      "actual": "0.05%",
+      "status": "OK"
+    }
+  ],
+  "downtime_breakdown": [
+    {
+      "day": "Senin",
+      "maintenance": 0.1,
+      "trouble_shooting": 0.1,
+      "other": 0.05
+    },
+    {
+      "day": "Selasa",
+      "maintenance": 0.15,
+      "trouble_shooting": 0.1,
+      "other": 0.05
+    },
+    {
+      "day": "Rabu",
+      "maintenance": 0.2,
+      "trouble_shooting": 0.15,
+      "other": 0.05
+    },
+    {
+      "day": "Kamis",
+      "maintenance": 0.15,
+      "trouble_shooting": 0.15,
+      "other": 0.05
+    },
+    {
+      "day": "Jumat",
+      "maintenance": 0.2,
+      "trouble_shooting": 0.2,
+      "other": 0.05
+    },
+    {
+      "day": "Sabtu",
+      "maintenance": 0.1,
+      "trouble_shooting": 0.15,
+      "other": 0.05
+    },
+    {
+      "day": "Minggu",
+      "maintenance": 0.15,
+      "trouble_shooting": 0.2,
+      "other": 0.05
+    }
+  ]
+}

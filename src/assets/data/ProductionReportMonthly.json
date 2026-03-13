@@ -1,0 +1,148 @@
+{
+  "report_type": "production_monthly",
+  "period": "January 2026",
+  "summary": {
+    "total_production": 2845.2,
+    "target": 3600,
+    "achievement_percent": 78.9,
+    "total_batches": 142,
+    "quality_ok_percent": 94.2,
+    "downtime_hours": 12.5,
+    "average_daily_production": 91.78
+  },
+  "weekly_data": [
+    {
+      "week": "Week 1 (Jan 1-5)",
+      "production": 589.3,
+      "target": 600,
+      "batches": 29,
+      "quality_ok": 93.8,
+      "downtime": 2.5
+    },
+    {
+      "week": "Week 2 (Jan 6-12)",
+      "production": 725.5,
+      "target": 840,
+      "batches": 35,
+      "quality_ok": 94.8,
+      "downtime": 2.5
+    },
+    {
+      "week": "Week 3 (Jan 13-19)",
+      "production": 698.2,
+      "target": 840,
+      "batches": 34,
+      "quality_ok": 94.1,
+      "downtime": 3.2
+    },
+    {
+      "week": "Week 4 (Jan 20-26)",
+      "production": 832.2,
+      "target": 840,
+      "batches": 40,
+      "quality_ok": 95.2,
+      "downtime": 4.3
+    }
+  ],
+  "material_consumption_monthly": [
+    {
+      "material": "Jagung",
+      "silo": "Silo-01",
+      "unit": "ton",
+      "opening_stock": 650,
+      "consumption": 512.5,
+      "closing_stock": 137.5,
+      "daily_average": 16.54,
+      "monthly_total": 512.5
+    },
+    {
+      "material": "Bungkil Kedelai",
+      "silo": "Silo-02",
+      "unit": "ton",
+      "opening_stock": 420,
+      "consumption": 358.4,
+      "closing_stock": 61.6,
+      "daily_average": 11.56,
+      "monthly_total": 358.4
+    },
+    {
+      "material": "Tepung Ikan",
+      "silo": "Silo-03",
+      "unit": "ton",
+      "opening_stock": 280,
+      "consumption": 185.2,
+      "closing_stock": 94.8,
+      "daily_average": 5.97,
+      "monthly_total": 185.2
+    },
+    {
+      "material": "Limestone",
+      "silo": "Silo-04",
+      "unit": "ton",
+      "opening_stock": 150,
+      "consumption": 132.8,
+      "closing_stock": 17.2,
+      "daily_average": 4.29,
+      "monthly_total": 132.8
+    },
+    {
+      "material": "Premix",
+      "silo": "Silo-05",
+      "unit": "ton",
+      "opening_stock": 95,
+      "consumption": 73.6,
+      "closing_stock": 21.4,
+      "daily_average": 2.37,
+      "monthly_total": 73.6
+    },
+    {
+      "material": "Salt",
+      "silo": "Silo-06",
+      "unit": "ton",
+      "opening_stock": 60,
+      "consumption": 48.2,
+      "closing_stock": 11.8,
+      "daily_average": 1.55,
+      "monthly_total": 48.2
+    }
+  ],
+  "recipe_breakdown_monthly": [
+    {
+      "recipe_name": "Starter 11",
+      "batches": 48,
+      "total_production": 1152,
+      "quality_ok_percent": 94.5
+    },
+    {
+      "recipe_name": "Grower 22",
+      "batches": 42,
+      "total_production": 1008,
+      "quality_ok_percent": 94.2
+    },
+    {
+      "recipe_name": "Layer 32",
+      "batches": 35,
+      "total_production": 560,
+      "quality_ok_percent": 93.8
+    },
+    {
+      "recipe_name": "Aqua Feed",
+      "batches": 17,
+      "total_production": 125.2,
+      "quality_ok_percent": 95.1
+    }
+  ],
+  "cost_analysis": {
+    "total_raw_material_cost": 28452000,
+    "total_production_cost": 32145000,
+    "cost_per_ton": 11298,
+    "material_breakdown": [
+      { "material": "Jagung", "cost": 10250000, "percentage": 36.0 },
+      { "material": "Bungkil Kedelai", "cost": 8952000, "percentage": 31.5 },
+      { "material": "Tepung Ikan", "cost": 4630000, "percentage": 16.3 },
+      { "material": "Limestone", "cost": 2328000, "percentage": 8.2 },
+      { "material": "Premix", "cost": 1472000, "percentage": 5.2 },
+      { "material": "Salt", "cost": 820000, "percentage": 2.9 }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "dashboard": "trend",
+  "widgets": [
+    {
+      "id": "process_trend",
+      "chart_type": "line",
+      "time_axis": "HH:mm",
+      "series": [
+        {
+          "name": "Temperature (°C)",
+          "data": [62, 63, 64, 63, 62]
+        },
+        {
+          "name": "Motor Current (A)",
+          "data": [18, 19, 21, 20, 18]
+        }
+      ],
+      "time": ["10:00", "10:05", "10:10", "10:15", "10:20"]
+    }
+  ]
+}

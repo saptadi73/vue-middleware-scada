@@ -1,0 +1,125 @@
+{
+  "summary": {
+    "totalTasks": 64,
+    "completedTasks": 40,
+    "inProgressTasks": 14,
+    "pendingTasks": 6,
+    "blockedTasks": 4,
+    "completionRate": 78.5,
+    "avgProgressWeighted": 74.2,
+    "slaBreachRate": 6.3
+  },
+  "statusBreakdown": [
+    { "status": "Not Started", "count": 6, "percentage": 9.4 },
+    { "status": "On Progress", "count": 14, "percentage": 21.9 },
+    { "status": "Blocked", "count": 4, "percentage": 6.3 },
+    { "status": "Done", "count": 40, "percentage": 62.5 }
+  ],
+  "projects": [
+    {
+      "name": "E-Commerce Revamp",
+      "weight": 35,
+      "overallProgress": 78,
+      "milestones": [
+        { "name": "Backend API v2", "progress": 80, "weight": 30, "status": "On Progress", "slaDays": 30, "daysElapsed": 18, "overdue": 0 },
+        { "name": "Payments Integration", "progress": 72, "weight": 25, "status": "On Progress", "slaDays": 28, "daysElapsed": 22, "overdue": 2 },
+        { "name": "Catalog UI", "progress": 86, "weight": 20, "status": "On Progress", "slaDays": 24, "daysElapsed": 15, "overdue": 0 },
+        { "name": "Checkout UX", "progress": 65, "weight": 25, "status": "On Progress", "slaDays": 26, "daysElapsed": 19, "overdue": 1 }
+      ]
+    },
+    {
+      "name": "Mobile Banking App",
+      "weight": 30,
+      "overallProgress": 64,
+      "milestones": [
+        { "name": "KYC Flow", "progress": 70, "weight": 30, "status": "On Progress", "slaDays": 20, "daysElapsed": 16, "overdue": 1 },
+        { "name": "Transfer Engine", "progress": 58, "weight": 35, "status": "On Progress", "slaDays": 25, "daysElapsed": 18, "overdue": 0 },
+        { "name": "Card Services", "progress": 62, "weight": 20, "status": "Not Started", "slaDays": 18, "daysElapsed": 0, "overdue": 0 },
+        { "name": "App Hardening", "progress": 68, "weight": 15, "status": "On Progress", "slaDays": 21, "daysElapsed": 10, "overdue": 0 }
+      ]
+    },
+    {
+      "name": "CRM System",
+      "weight": 20,
+      "overallProgress": 55,
+      "milestones": [
+        { "name": "Lead Scoring", "progress": 54, "weight": 25, "status": "On Progress", "slaDays": 15, "daysElapsed": 9, "overdue": 0 },
+        { "name": "Pipeline Views", "progress": 49, "weight": 30, "status": "On Progress", "slaDays": 18, "daysElapsed": 11, "overdue": 0 },
+        { "name": "Email Automation", "progress": 58, "weight": 25, "status": "On Progress", "slaDays": 17, "daysElapsed": 12, "overdue": 1 },
+        { "name": "Reporting", "progress": 62, "weight": 20, "status": "On Progress", "slaDays": 16, "daysElapsed": 14, "overdue": 0 }
+      ]
+    },
+    {
+      "name": "Analytics Dashboard",
+      "weight": 15,
+      "overallProgress": 82,
+      "milestones": [
+        { "name": "Data Pipelines", "progress": 84, "weight": 35, "status": "Done", "slaDays": 20, "daysElapsed": 20, "overdue": 0 },
+        { "name": "Visualization", "progress": 80, "weight": 35, "status": "On Progress", "slaDays": 22, "daysElapsed": 18, "overdue": 0 },
+        { "name": "Access Control", "progress": 78, "weight": 30, "status": "On Progress", "slaDays": 18, "daysElapsed": 16, "overdue": 0 }
+      ]
+    }
+  ],
+  "milestoneProgress": [
+    { "project": "E-Commerce Revamp", "milestone": "Backend API v2", "progress": 80, "status": "On Progress", "weight": 30 },
+    { "project": "E-Commerce Revamp", "milestone": "Payments Integration", "progress": 72, "status": "On Progress", "weight": 25 },
+    { "project": "E-Commerce Revamp", "milestone": "Catalog UI", "progress": 86, "status": "On Progress", "weight": 20 },
+    { "project": "E-Commerce Revamp", "milestone": "Checkout UX", "progress": 65, "status": "On Progress", "weight": 25 },
+    { "project": "Mobile Banking App", "milestone": "KYC Flow", "progress": 70, "status": "On Progress", "weight": 30 },
+    { "project": "Mobile Banking App", "milestone": "Transfer Engine", "progress": 58, "status": "On Progress", "weight": 35 },
+    { "project": "Mobile Banking App", "milestone": "Card Services", "progress": 62, "status": "Not Started", "weight": 20 },
+    { "project": "Mobile Banking App", "milestone": "App Hardening", "progress": 68, "status": "On Progress", "weight": 15 },
+    { "project": "CRM System", "milestone": "Lead Scoring", "progress": 54, "status": "On Progress", "weight": 25 },
+    { "project": "CRM System", "milestone": "Pipeline Views", "progress": 49, "status": "On Progress", "weight": 30 },
+    { "project": "CRM System", "milestone": "Email Automation", "progress": 58, "status": "On Progress", "weight": 25 },
+    { "project": "CRM System", "milestone": "Reporting", "progress": 62, "status": "On Progress", "weight": 20 },
+    { "project": "Analytics Dashboard", "milestone": "Data Pipelines", "progress": 84, "status": "Done", "weight": 35 },
+    { "project": "Analytics Dashboard", "milestone": "Visualization", "progress": 80, "status": "On Progress", "weight": 35 },
+    { "project": "Analytics Dashboard", "milestone": "Access Control", "progress": 78, "status": "On Progress", "weight": 30 }
+  ],
+  "gantt": [
+    { "task": "Backend API v2", "start": "2025-01-02", "end": "2025-02-10", "progress": 80, "status": "On Progress", "assignee": "Backend Team" },
+    { "task": "Payments Integration", "start": "2025-01-15", "end": "2025-02-12", "progress": 72, "status": "On Progress", "assignee": "Payments Squad" },
+    { "task": "Catalog UI", "start": "2025-01-05", "end": "2025-01-28", "progress": 86, "status": "On Progress", "assignee": "Frontend Squad" },
+    { "task": "Checkout UX", "start": "2025-01-18", "end": "2025-02-14", "progress": 65, "status": "On Progress", "assignee": "Frontend Squad" },
+    { "task": "KYC Flow", "start": "2025-01-08", "end": "2025-01-30", "progress": 70, "status": "On Progress", "assignee": "Mobile Team" },
+    { "task": "Transfer Engine", "start": "2025-01-12", "end": "2025-02-16", "progress": 58, "status": "On Progress", "assignee": "Backend Team" },
+    { "task": "Card Services", "start": "2025-02-01", "end": "2025-02-22", "progress": 62, "status": "Not Started", "assignee": "Mobile Team" },
+    { "task": "App Hardening", "start": "2025-01-20", "end": "2025-02-05", "progress": 68, "status": "On Progress", "assignee": "Security" },
+    { "task": "Lead Scoring", "start": "2025-01-10", "end": "2025-01-29", "progress": 54, "status": "On Progress", "assignee": "CRM Team" },
+    { "task": "Pipeline Views", "start": "2025-01-15", "end": "2025-02-08", "progress": 49, "status": "On Progress", "assignee": "CRM Team" },
+    { "task": "Email Automation", "start": "2025-01-18", "end": "2025-02-15", "progress": 58, "status": "On Progress", "assignee": "CRM Team" },
+    { "task": "Reporting", "start": "2025-01-22", "end": "2025-02-18", "progress": 62, "status": "On Progress", "assignee": "Analytics" },
+    { "task": "Data Pipelines", "start": "2025-01-01", "end": "2025-01-20", "progress": 84, "status": "Done", "assignee": "Data Team" },
+    { "task": "Visualization", "start": "2025-01-05", "end": "2025-02-03", "progress": 80, "status": "On Progress", "assignee": "BI Team" },
+    { "task": "Access Control", "start": "2025-01-12", "end": "2025-02-07", "progress": 78, "status": "On Progress", "assignee": "Security" }
+  ],
+  "burndown": [
+    { "label": "Day 1", "scope": 120, "remaining": 118, "completed": 2 },
+    { "label": "Day 3", "scope": 120, "remaining": 112, "completed": 8 },
+    { "label": "Day 5", "scope": 120, "remaining": 104, "completed": 16 },
+    { "label": "Day 7", "scope": 120, "remaining": 95, "completed": 25 },
+    { "label": "Day 9", "scope": 120, "remaining": 88, "completed": 32 },
+    { "label": "Day 11", "scope": 120, "remaining": 80, "completed": 40 },
+    { "label": "Day 13", "scope": 120, "remaining": 70, "completed": 50 },
+    { "label": "Day 15", "scope": 120, "remaining": 62, "completed": 58 }
+  ],
+  "overdueHeatmap": [
+    { "month": "Jan", "weeks": [ { "week": "W1", "overdue": 1 }, { "week": "W2", "overdue": 0 }, { "week": "W3", "overdue": 2 }, { "week": "W4", "overdue": 1 } ] },
+    { "month": "Feb", "weeks": [ { "week": "W1", "overdue": 2 }, { "week": "W2", "overdue": 1 }, { "week": "W3", "overdue": 3 }, { "week": "W4", "overdue": 2 } ] },
+    { "month": "Mar", "weeks": [ { "week": "W1", "overdue": 1 }, { "week": "W2", "overdue": 1 }, { "week": "W3", "overdue": 2 }, { "week": "W4", "overdue": 0 } ] }
+  ],
+  "dependencies": [
+    { "task": "Payments Integration", "dependsOn": "Backend API v2", "status": "On Progress", "risk": "High" },
+    { "task": "Checkout UX", "dependsOn": "Catalog UI", "status": "Blocked", "risk": "Medium" },
+    { "task": "Card Services", "dependsOn": "Transfer Engine", "status": "Not Started", "risk": "Medium" },
+    { "task": "Email Automation", "dependsOn": "Pipeline Views", "status": "On Progress", "risk": "Low" }
+  ],
+  "sla": {
+    "onTrack": 90,
+    "atRisk": 6,
+    "breached": 3,
+    "avgDelayDays": 1.8,
+    "overdueTasks": 5
+  }
+}

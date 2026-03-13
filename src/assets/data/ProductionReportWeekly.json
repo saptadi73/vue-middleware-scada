@@ -1,0 +1,150 @@
+{
+  "report_type": "production_weekly",
+  "period": "2026-01-20 to 2026-01-26",
+  "summary": {
+    "total_production": 725.5,
+    "target": 840,
+    "achievement_percent": 86.3,
+    "total_batches": 35,
+    "quality_ok_percent": 94.8,
+    "downtime_hours": 2.5
+  },
+  "daily_data": [
+    {
+      "date": "2026-01-20",
+      "day": "Monday",
+      "production": 95.2,
+      "target": 120,
+      "batches": 5,
+      "quality_ok": 95.2,
+      "downtime": 0.5
+    },
+    {
+      "date": "2026-01-21",
+      "day": "Tuesday",
+      "production": 110.5,
+      "target": 120,
+      "batches": 5,
+      "quality_ok": 96.1,
+      "downtime": 0.3
+    },
+    {
+      "date": "2026-01-22",
+      "day": "Wednesday",
+      "production": 105.8,
+      "target": 120,
+      "batches": 5,
+      "quality_ok": 94.2,
+      "downtime": 0.4
+    },
+    {
+      "date": "2026-01-23",
+      "day": "Thursday",
+      "production": 98.3,
+      "target": 120,
+      "batches": 5,
+      "quality_ok": 93.5,
+      "downtime": 0.6
+    },
+    {
+      "date": "2026-01-24",
+      "day": "Friday",
+      "production": 115.2,
+      "target": 120,
+      "batches": 5,
+      "quality_ok": 95.8,
+      "downtime": 0.3
+    },
+    {
+      "date": "2026-01-25",
+      "day": "Saturday",
+      "production": 100.5,
+      "target": 120,
+      "batches": 3,
+      "quality_ok": 95.2,
+      "downtime": 0.2
+    },
+    {
+      "date": "2026-01-26",
+      "day": "Sunday",
+      "production": 0,
+      "target": 0,
+      "batches": 0,
+      "quality_ok": 0,
+      "downtime": 0
+    }
+  ],
+  "material_consumption": [
+    {
+      "material": "Jagung",
+      "silo": "Silo-01",
+      "unit": "ton",
+      "opening_stock": 650,
+      "consumption": 125.5,
+      "closing_stock": 524.5,
+      "daily_average": 17.93
+    },
+    {
+      "material": "Bungkil Kedelai",
+      "silo": "Silo-02",
+      "unit": "ton",
+      "opening_stock": 420,
+      "consumption": 89.3,
+      "closing_stock": 330.7,
+      "daily_average": 12.76
+    },
+    {
+      "material": "Tepung Ikan",
+      "silo": "Silo-03",
+      "unit": "ton",
+      "opening_stock": 280,
+      "consumption": 45.8,
+      "closing_stock": 234.2,
+      "daily_average": 6.54
+    },
+    {
+      "material": "Limestone",
+      "silo": "Silo-04",
+      "unit": "ton",
+      "opening_stock": 150,
+      "consumption": 32.5,
+      "closing_stock": 117.5,
+      "daily_average": 4.64
+    },
+    {
+      "material": "Premix",
+      "silo": "Silo-05",
+      "unit": "ton",
+      "opening_stock": 95,
+      "consumption": 18.2,
+      "closing_stock": 76.8,
+      "daily_average": 2.60
+    }
+  ],
+  "recipe_breakdown": [
+    {
+      "recipe_name": "Starter 11",
+      "batches": 12,
+      "total_production": 288,
+      "quality_ok_percent": 96.2
+    },
+    {
+      "recipe_name": "Grower 22",
+      "batches": 10,
+      "total_production": 240,
+      "quality_ok_percent": 94.1
+    },
+    {
+      "recipe_name": "Layer 32",
+      "batches": 8,
+      "total_production": 160,
+      "quality_ok_percent": 93.8
+    },
+    {
+      "recipe_name": "Aqua Feed",
+      "batches": 5,
+      "total_production": 37.5,
+      "quality_ok_percent": 95.5
+    }
+  ]
+}

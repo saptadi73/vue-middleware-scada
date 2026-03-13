@@ -1,0 +1,26 @@
+{
+  "dashboard": "overview",
+  "widgets": [
+    {
+      "id": "plant_status",
+      "chart_type": "status_badge",
+      "label": "Plant Status",
+      "value": "RUNNING"
+    },
+    {
+      "id": "production_today",
+      "chart_type": "kpi_card",
+      "label": "Production Today (Ton)",
+      "target": 120,
+      "actual": 95.4,
+      "achievement_percent": 79.5
+    },
+    {
+      "id": "batch_progress",
+      "chart_type": "progress_bar",
+      "label": "Batch Completion",
+      "completed": 18,
+      "total": 22
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "dashboard": "control",
+  "widgets": [
+    {
+      "id": "batch_control",
+      "chart_type": "control_button",
+      "actions": [
+        {
+          "name": "START_BATCH",
+          "label": "Start Batch",
+          "confirm": true,
+          "enabled": true
+        },
+        {
+          "name": "PAUSE_BATCH",
+          "label": "Pause Batch",
+          "confirm": true,
+          "enabled": true
+        },
+        {
+          "name": "ABORT_BATCH",
+          "label": "Abort Batch",
+          "confirm": true,
+          "enabled": false
+        }
+      ]
+    }
+  ]
+}

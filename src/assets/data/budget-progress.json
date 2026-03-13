@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "totalBudget": 500000,
+    "spentBudget": 342500,
+    "remainingBudget": 157500,
+    "utilizationRate": 68.5
+  },
+  "monthlyBudget": [
+    {
+      "month": "Jan",
+      "allocated": 80000,
+      "spent": 72000,
+      "variance": 8000
+    },
+    {
+      "month": "Feb",
+      "allocated": 85000,
+      "spent": 78000,
+      "variance": 7000
+    },
+    {
+      "month": "Mar",
+      "allocated": 80000,
+      "spent": 85000,
+      "variance": -5000
+    },
+    {
+      "month": "Apr",
+      "allocated": 90000,
+      "spent": 82500,
+      "variance": 7500
+    },
+    {
+      "month": "May",
+      "allocated": 85000,
+      "spent": 87000,
+      "variance": -2000
+    },
+    {
+      "month": "Jun",
+      "allocated": 80000,
+      "spent": 78000,
+      "variance": 2000
+    }
+  ],
+  "budgetByCategory": [
+    {
+      "category": "Human Resources",
+      "allocated": 200000,
+      "spent": 145000,
+      "percentage": 42.3
+    },
+    {
+      "category": "Technology & Tools",
+      "allocated": 150000,
+      "spent": 98500,
+      "percentage": 28.8
+    },
+    {
+      "category": "Marketing",
+      "allocated": 80000,
+      "spent": 55000,
+      "percentage": 16.1
+    },
+    {
+      "category": "Operations",
+      "allocated": 70000,
+      "spent": 44000,
+      "percentage": 12.8
+    }
+  ]
+}

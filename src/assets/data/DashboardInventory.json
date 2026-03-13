@@ -1,0 +1,43 @@
+{
+  "dashboard": "inventory",
+  "widgets": [
+    {
+      "id": "inventory_status",
+      "chart_type": "inventory_level",
+      "items": [
+        {
+          "name": "Silo Jagung",
+          "percentage": 65,
+          "current": 450,
+          "capacity": 700,
+          "unit": "ton",
+          "status": "NORMAL"
+        },
+        {
+          "name": "Silo Kedelai",
+          "percentage": 35,
+          "current": 175,
+          "capacity": 500,
+          "unit": "ton",
+          "status": "WARNING"
+        },
+        {
+          "name": "Silo Tepung Ikan",
+          "percentage": 85,
+          "current": 425,
+          "capacity": 500,
+          "unit": "ton",
+          "status": "NORMAL"
+        },
+        {
+          "name": "Packaging Material",
+          "percentage": 45,
+          "current": 2250,
+          "capacity": 5000,
+          "unit": "unit",
+          "status": "WARNING"
+        }
+      ]
+    }
+  ]
+}

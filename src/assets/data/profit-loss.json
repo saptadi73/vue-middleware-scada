@@ -1,0 +1,102 @@
+{
+  "summary": {
+    "totalRevenue": 680000,
+    "totalExpenses": 485000,
+    "netProfit": 195000,
+    "profitMargin": 28.7,
+    "growthRate": 15.3
+  },
+  "monthlyPnL": [
+    {
+      "month": "Jan",
+      "revenue": 95000,
+      "expenses": 72000,
+      "profit": 23000,
+      "margin": 24.2
+    },
+    {
+      "month": "Feb",
+      "revenue": 102000,
+      "expenses": 78000,
+      "profit": 24000,
+      "margin": 23.5
+    },
+    {
+      "month": "Mar",
+      "revenue": 108000,
+      "expenses": 85000,
+      "profit": 23000,
+      "margin": 21.3
+    },
+    {
+      "month": "Apr",
+      "revenue": 115000,
+      "expenses": 82500,
+      "profit": 32500,
+      "margin": 28.3
+    },
+    {
+      "month": "May",
+      "revenue": 125000,
+      "expenses": 87000,
+      "profit": 38000,
+      "margin": 30.4
+    },
+    {
+      "month": "Jun",
+      "revenue": 135000,
+      "expenses": 80500,
+      "profit": 54500,
+      "margin": 40.4
+    }
+  ],
+  "revenueBySource": [
+    {
+      "source": "Project Contracts",
+      "amount": 420000,
+      "percentage": 61.8
+    },
+    {
+      "source": "Consulting Services",
+      "amount": 150000,
+      "percentage": 22.1
+    },
+    {
+      "source": "Support & Maintenance",
+      "amount": 80000,
+      "percentage": 11.8
+    },
+    {
+      "source": "Training",
+      "amount": 30000,
+      "percentage": 4.4
+    }
+  ],
+  "expensesByCategory": [
+    {
+      "category": "Salaries & Benefits",
+      "amount": 245000,
+      "percentage": 50.5
+    },
+    {
+      "category": "Technology & Tools",
+      "amount": 98500,
+      "percentage": 20.3
+    },
+    {
+      "category": "Marketing & Sales",
+      "amount": 68000,
+      "percentage": 14.0
+    },
+    {
+      "category": "Operations",
+      "amount": 48500,
+      "percentage": 10.0
+    },
+    {
+      "category": "Others",
+      "amount": 25000,
+      "percentage": 5.2
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "summary": {
+    "totalEmployees": 24,
+    "activeProjects": 6,
+    "utilizationRate": 87.5,
+    "averageProductivity": 92.3,
+    "totalWorkingHours": 3840,
+    "totalCapacityHours": 4320,
+    "averageAttendance": 94.5
+  },
+  "teamComposition": [
+    {
+      "department": "Development",
+      "members": 10,
+      "percentage": 41.7
+    },
+    {
+      "department": "Design",
+      "members": 4,
+      "percentage": 16.7
+    },
+    {
+      "department": "QA/Testing",
+      "members": 3,
+      "percentage": 12.5
+    },
+    {
+      "department": "Project Management",
+      "members": 3,
+      "percentage": 12.5
+    },
+    {
+      "department": "DevOps",
+      "members": 2,
+      "percentage": 8.3
+    },
+    {
+      "department": "Marketing",
+      "members": 2,
+      "percentage": 8.3
+    }
+  ],
+  "productivityTrend": [
+    {
+      "month": "Jan",
+      "productivity": 85,
+      "utilization": 82
+    },
+    {
+      "month": "Feb",
+      "productivity": 88,
+      "utilization": 85
+    },
+    {
+      "month": "Mar",
+      "productivity": 90,
+      "utilization": 87
+    },
+    {
+      "month": "Apr",
+      "productivity": 92,
+      "utilization": 88
+    },
+    {
+      "month": "May",
+      "productivity": 91,
+      "utilization": 86
+    },
+    {
+      "month": "Jun",
+      "productivity": 93,
+      "utilization": 89
+    }
+  ],
+  "skillDistribution": [
+    {
+      "skill": "Frontend Development",
+      "count": 8
+    },
+    {
+      "skill": "Backend Development",
+      "count": 7
+    },
+    {
+      "skill": "UI/UX Design",
+      "count": 4
+    },
+    {
+      "skill": "QA/Testing",
+      "count": 3
+    },
+    {
+      "skill": "DevOps",
+      "count": 2
+    }
+  ],
+  "projectAllocation": [
+    {
+      "projectName": "E-Commerce Platform",
+      "totalMembers": 8,
+      "roles": {
+        "Frontend Dev": 3,
+        "Backend Dev": 2,
+        "Designer": 1,
+        "QA": 1,
+        "PM": 1
+      },
+      "status": "Active",
+      "completionRate": 75
+    },
+    {
+      "projectName": "Mobile Banking App",
+      "totalMembers": 6,
+      "roles": {
+        "Frontend Dev": 2,
+        "Backend Dev": 2,
+        "Designer": 1,
+        "QA": 1
+      },
+      "status": "Active",
+      "completionRate": 60
+    },
+    {
+      "projectName": "CRM System",
+      "totalMembers": 5,
+      "roles": {
+        "Frontend Dev": 2,
+        "Backend Dev": 2,
+        "DevOps": 1
+      },
+      "status": "Active",
+      "completionRate": 45
+    },
+    {
+      "projectName": "Analytics Dashboard",
+      "totalMembers": 3,
+      "roles": {
+        "Frontend Dev": 1,
+        "Backend Dev": 1,
+        "Designer": 1
+      },
+      "status": "Active",
+      "completionRate": 80
+    },
+    {
+      "projectName": "Marketing Portal",
+      "totalMembers": 2,
+      "roles": {
+        "Designer": 1,
+        "Marketing": 1
+      },
+      "status": "Active",
+      "completionRate": 90
+    }
+  ],
+  "workloadData": [
+    {
+      "week": "Week 1",
+      "workedHours": 920,
+      "capacityHours": 960,
+      "utilizationRate": 95.8
+    },
+    {
+      "week": "Week 2",
+      "workedHours": 880,
+      "capacityHours": 960,
+      "utilizationRate": 91.7
+    },
+    {
+      "week": "Week 3",
+      "workedHours": 940,
+      "capacityHours": 960,
+      "utilizationRate": 97.9
+    },
+    {
+      "week": "Week 4",
+      "workedHours": 900,
+      "capacityHours": 960,
+      "utilizationRate": 93.8
+    }
+  ],
+  "skillMatrix": [
+    {
+      "skill": "React/Vue.js",
+      "level": "Expert",
+      "count": 6,
+      "percentage": 25
+    },
+    {
+      "skill": "React/Vue.js",
+      "level": "Intermediate",
+      "count": 4,
+      "percentage": 16.7
+    },
+    {
+      "skill": "Node.js/Express",
+      "level": "Expert",
+      "count": 5,
+      "percentage": 20.8
+    },
+    {
+      "skill": "Node.js/Express",
+      "level": "Intermediate",
+      "count": 3,
+      "percentage": 12.5
+    },
+    {
+      "skill": "UI/UX Design",
+      "level": "Expert",
+      "count": 3,
+      "percentage": 12.5
+    },
+    {
+      "skill": "UI/UX Design",
+      "level": "Intermediate",
+      "count": 2,
+      "percentage": 8.3
+    },
+    {
+      "skill": "QA/Testing",
+      "level": "Expert",
+      "count": 2,
+      "percentage": 8.3
+    },
+    {
+      "skill": "DevOps/Cloud",
+      "level": "Expert",
+      "count": 2,
+      "percentage": 8.3
+    },
+    {
+      "skill": "Project Management",
+      "level": "Expert",
+      "count": 3,
+      "percentage": 12.5
+    }
+  ],
+  "attendanceData": {
+    "summary": {
+      "totalWorkingDays": 22,
+      "averagePresent": 20.8,
+      "averageAbsent": 0.3,
+      "averageLeave": 0.9,
+      "attendanceRate": 94.5
+    },
+    "weeklyTrend": [
+      {
+        "week": "Week 1",
+        "present": 95,
+        "absent": 2,
+        "leave": 3
+      },
+      {
+        "week": "Week 2",
+        "present": 93,
+        "absent": 4,
+        "leave": 3
+      },
+      {
+        "week": "Week 3",
+        "present": 96,
+        "absent": 1,
+        "leave": 3
+      },
+      {
+        "week": "Week 4",
+        "present": 94,
+        "absent": 3,
+        "leave": 3
+      }
+    ],
+    "availability": [
+      {
+        "status": "Available",
+        "count": 21,
+        "percentage": 87.5
+      },
+      {
+        "status": "On Leave",
+        "count": 2,
+        "percentage": 8.3
+      },
+      {
+        "status": "Sick",
+        "count": 1,
+        "percentage": 4.2
+      }
+    ]
+  },
+  "individualProductivity": [
+    {
+      "name": "John Smith",
+      "role": "Senior Frontend Dev",
+      "department": "Development",
+      "productivityScore": 96,
+      "tasksCompleted": 28,
+      "hoursWorked": 168,
+      "efficiency": 95
+    },
+    {
+      "name": "Sarah Johnson",
+      "role": "Senior Backend Dev",
+      "department": "Development",
+      "productivityScore": 94,
+      "tasksCompleted": 25,
+      "hoursWorked": 172,
+      "efficiency": 92
+    },
+    {
+      "name": "Mike Chen",
+      "role": "UI/UX Designer",
+      "department": "Design",
+      "productivityScore": 93,
+      "tasksCompleted": 22,
+      "hoursWorked": 165,
+      "efficiency": 94
+    },
+    {
+      "name": "Emily Davis",
+      "role": "Frontend Dev",
+      "department": "Development",
+      "productivityScore": 91,
+      "tasksCompleted": 24,
+      "hoursWorked": 168,
+      "efficiency": 90
+    },
+    {
+      "name": "David Wilson",
+      "role": "Backend Dev",
+      "department": "Development",
+      "productivityScore": 90,
+      "tasksCompleted": 23,
+      "hoursWorked": 170,
+      "efficiency": 89
+    },
+    {
+      "name": "Lisa Anderson",
+      "role": "QA Engineer",
+      "department": "QA/Testing",
+      "productivityScore": 92,
+      "tasksCompleted": 30,
+      "hoursWorked": 168,
+      "efficiency": 93
+    },
+    {
+      "name": "Tom Martinez",
+      "role": "Project Manager",
+      "department": "Project Management",
+      "productivityScore": 89,
+      "tasksCompleted": 18,
+      "hoursWorked": 175,
+      "efficiency": 87
+    },
+    {
+      "name": "Anna Taylor",
+      "role": "DevOps Engineer",
+      "department": "DevOps",
+      "productivityScore": 95,
+      "tasksCompleted": 20,
+      "hoursWorked": 168,
+      "efficiency": 96
+    }
+  ],
+  "teamProductivity": [
+    {
+      "team": "Development",
+      "avgProductivity": 93,
+      "tasksCompleted": 142,
+      "onTimeDelivery": 89
+    },
+    {
+      "team": "Design",
+      "avgProductivity": 91,
+      "tasksCompleted": 45,
+      "onTimeDelivery": 92
+    },
+    {
+      "team": "QA/Testing",
+      "avgProductivity": 90,
+      "tasksCompleted": 78,
+      "onTimeDelivery": 95
+    },
+    {
+      "team": "Project Management",
+      "avgProductivity": 88,
+      "tasksCompleted": 32,
+      "onTimeDelivery": 85
+    },
+    {
+      "team": "DevOps",
+      "avgProductivity": 94,
+      "tasksCompleted": 38,
+      "onTimeDelivery": 93
+    }
+  ]
+}

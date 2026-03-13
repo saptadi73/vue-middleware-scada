@@ -1,0 +1,125 @@
+{
+  "equipment": [
+    {
+      "id": "EQ_001",
+      "name": "Hammer Mill Mixer A",
+      "type": "Grinding Machine",
+      "status": "Running",
+      "uptime_percent": 94.5,
+      "last_maintenance": "2026-01-20",
+      "next_scheduled": "2026-02-03",
+      "hours_since_maintenance": 168,
+      "total_operating_hours": 8945,
+      "critical": false,
+      "maintenance_history": [
+        {
+          "date": "2026-01-20",
+          "type": "Preventive",
+          "description": "Oil change and bearing inspection",
+          "duration_hours": 2.5,
+          "cost": 850000
+        },
+        {
+          "date": "2026-01-13",
+          "type": "Corrective",
+          "description": "Fixed motor vibration issue",
+          "duration_hours": 4,
+          "cost": 2100000
+        }
+      ]
+    },
+    {
+      "id": "EQ_002",
+      "name": "Conveyor Belt System",
+      "type": "Material Transport",
+      "status": "Running",
+      "uptime_percent": 98.2,
+      "last_maintenance": "2026-01-15",
+      "next_scheduled": "2026-01-29",
+      "hours_since_maintenance": 288,
+      "total_operating_hours": 12450,
+      "critical": false,
+      "maintenance_history": [
+        {
+          "date": "2026-01-15",
+          "type": "Preventive",
+          "description": "Belt tension adjustment and cleaning",
+          "duration_hours": 1.5,
+          "cost": 450000
+        }
+      ]
+    },
+    {
+      "id": "EQ_003",
+      "name": "Mixer Horizontal",
+      "type": "Mixing Machine",
+      "status": "Maintenance",
+      "uptime_percent": 92.1,
+      "last_maintenance": "2026-01-22",
+      "next_scheduled": "2026-02-05",
+      "hours_since_maintenance": 120,
+      "total_operating_hours": 7820,
+      "critical": true,
+      "maintenance_history": [
+        {
+          "date": "2026-01-22",
+          "type": "Corrective",
+          "description": "Motor bearing replacement",
+          "duration_hours": 6,
+          "cost": 4500000
+        }
+      ]
+    },
+    {
+      "id": "EQ_004",
+      "name": "Pellet Machine",
+      "type": "Pelletizing",
+      "status": "Running",
+      "uptime_percent": 89.7,
+      "last_maintenance": "2026-01-18",
+      "next_scheduled": "2026-02-01",
+      "hours_since_maintenance": 216,
+      "total_operating_hours": 15230,
+      "critical": false,
+      "maintenance_history": [
+        {
+          "date": "2026-01-18",
+          "type": "Preventive",
+          "description": "Die replacement and inspection",
+          "duration_hours": 5,
+          "cost": 3200000
+        }
+      ]
+    },
+    {
+      "id": "EQ_005",
+      "name": "Cooler Machine",
+      "type": "Cooling System",
+      "status": "Running",
+      "uptime_percent": 96.3,
+      "last_maintenance": "2026-01-17",
+      "next_scheduled": "2026-01-31",
+      "hours_since_maintenance": 240,
+      "total_operating_hours": 9560,
+      "critical": false,
+      "maintenance_history": [
+        {
+          "date": "2026-01-17",
+          "type": "Preventive",
+          "description": "Thermostat calibration and fan cleaning",
+          "duration_hours": 2,
+          "cost": 620000
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_equipment": 5,
+    "running": 4,
+    "maintenance": 1,
+    "average_uptime": 94.16,
+    "total_maintenance_cost_month": 11270000,
+    "upcoming_maintenance": 3,
+    "critical_alerts": 1
+  }
+}
