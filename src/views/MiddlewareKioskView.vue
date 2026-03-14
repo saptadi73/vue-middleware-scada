@@ -51,15 +51,20 @@ const taskStatusClass = (status) => {
 }
 
 const callMiddleware = async (path, options = {}) => {
+  const headers = {
+    ...(options.headers || {}),
+  }
+
+  if (options.body && !headers['Content-Type']) {
+    headers['Content-Type'] = 'application/json'
+  }
+
   const response = await fetch(`${API_BASE_URL}${path}`, {
-    headers: {
-      'Content-Type': 'application/json',
-      ...(options.headers || {}),
-    },
+    headers,
     ...options,
   })
 
-  const payload = await response.json()
+  const payload = response.status === 204 ? null : await response.json()
   if (!response.ok || payload?.status === 'error') {
     throw new Error(payload?.detail || payload?.message || 'Middleware request failed')
   }
